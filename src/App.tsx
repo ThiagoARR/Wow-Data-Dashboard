@@ -5,36 +5,52 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <div id="left-menu">
-        <ul>
-          <li className='option-menu'></li>
-          <li className='option-menu'></li>
-          <li className='option-menu'></li>
-          <li className='option-menu'></li>
-          <li className='option-menu'></li>
-        </ul>
-      </div>
-      <div id='main-content'>
-        <div className='main-content-wrap'>
-          <div className='left-content-wrap'>
-            <div className='left-content-1'></div>
-            <div className='left-content-2'></div>
+      <div className='header'>
+        <div className='header-main-icon'>
+
+        </div>
+        <div className='header-wrap'>
+          <div className='header-wrap-left-content'> 
+            <div className='header-menu-list'>
+              <ul>
+                <li>Home</li>
+                <li>Characters</li>
+                <li>Dashboard</li>
+                <li>Ranking</li>
+              </ul>
+            </div>
+            <div className='header-menu-searchbar'>
+              <input type="text" placeholder='Busque seu personagem' />
+              <div className='header-menu-searchbar-icon'></div>
+            </div>
           </div>
-          <div className='right-content-wrap'>
-            <div className='right-content-1'></div>
-            <div className='right-content-2'></div>
-            <div className='right-content-3'></div>
+
+          <div className='header-wrap-right-content'>
+            <div className='header-loggin-button-wrap'>
+              <div className='header-loggin-button'>Logar com BattleNet</div>
+            </div>
           </div>
         </div>
+
       </div>
-      <div id="right-menu">
+      <div className='sidebar-left'>
         <ul>
-          <li className='option-menu'></li>
-          <li className='option-menu'></li>
-          <li className='option-menu'></li>
-          <li className='option-menu'></li>
-          <li className='option-menu'></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
+      </div>
+      <div className='sidebar-right'>
+      <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div className='content'>
+        <div className='teste'></div>
       </div>
     </div>
   )

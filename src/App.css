@@ -2,90 +2,187 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-.App{
-  width: 100%;
-  height: 100vh;
-  background-color: #1F233F;
-  display: flex;
-  flex-direction: row;
-}
-
-ul, li{
-list-style: none;
-}
-
-ul{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-li {
-  width: 60px;
-  height: 60px;
-  border-radius: 15px;
-  background-color: #2A2976;
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;  
-  justify-content: center;
-  box-shadow: 0 0 4px 0 #111;
-}
-
-#left-menu{
-  width: 90px;
-  height: 100vh;
-  background-color: #191E3A;
-  align-self: flex-start;
-}
-
-#main-content{
-  width: 100%;
-  height: 100vh;
-
-}
-
-#right-menu{
-  width: 90px;
-  height: 100vh;
-  background-color: #191E3A;
-  align-self: flex-end;
-}
-
-.main-content-wrap{
-  padding: 20px;
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.left-content-wrap, .right-content-wrap{
-  display: flex;
-  flex-direction: column;
-}
-
-.left-content-wrap div{
-  width: 800px;
-  height: 270px;
-  background-color: #292F51;
-  border-radius: 30px;
-  margin: 10px 0;
-}
-
-.right-content-wrap div{
-  background-color: #292F51;
-  border-radius: 30px;
-  width: 500px;
-  height: 173px;
-  margin: 10px 0;
-}
-
-.left-content-2{
   
 }
 
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
 
+ul{
+  list-style: none;
+}
 
+.App{
+  display: flex;
+}
+
+.header {
+  background-color: #292F51;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+}
+
+.header-wrap{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-wrap-left-content, .header-wrap-right-content{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header-main-icon{
+  width: 70px;
+  height: 70px;
+  background-color: #8C55FE;
+}
+
+.header-menu-list ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-menu-list ul li{
+  margin-left: 20px;
+  color: white;
+  font-size: 14px;
+}
+
+.header-menu-searchbar{
+  margin-left: 40px;
+  display: flex;
+}
+
+.header-menu-searchbar input{
+  border: none;
+  height: 35px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  background-color: #0e122e;
+  padding: 10px;
+  color: white;
+}
+
+.header-menu-searchbar input::placeholder{
+  color: rgb(65, 65, 65);
+  font-style: italic;
+}
+
+.header-menu-searchbar input:focus{
+  outline: none;
+  box-shadow: 0 0 5px #97a2f5;
+}
+
+.header-menu-searchbar-icon{
+  height: 35px;
+  width: 35px;
+  background-color: #97a2f5;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.header-loggin-button-wrap{
+  margin-left: 20px;
+}
+
+.header-loggin-button{
+  width: 150px;
+  height: 35px;
+  background-color: #0070D9;
+  border-radius: 3px;
+  font-size: 13px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-left {
+  background-color: #191E3A;
+  width: 70px;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  z-index: 1;
+}
+
+.sidebar-left ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.sidebar-left ul li{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #8C55FE;
+  margin-top: 15px;
+}
+
+.sidebar-right {
+  background-color: #191E3A;
+  width: 70px;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  z-index: 1;
+}
+
+.sidebar-right ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-right ul li{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 15px;
+  background-color: #8C55FE;
+}
+
+.content {
+  background-color: #1F233F;
+  flex: 1;
+  margin: 70px 70px 0 70px;
+  overflow: scroll;
+  height: 100vh;
+}
+
+.content::-webkit-scrollbar {
+  width: 0.4em;
+  background-color: #292F51;
+  border-radius: 50px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #0e122e;
+  border-radius: 50px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+  border-radius: 50px;
+}
